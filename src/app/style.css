@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+
+
+.container {
+    max-width: 1288px;
+    padding: 20px 20px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        padding: 15px 15px;
+    }
+}
+
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+}
+
+@layer utilities {
+    /* Chrome, Safari, Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Firefox, IE, Edge */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE и Edge */
+        scrollbar-width: none;    /* Firefox */
+    }
+}
+

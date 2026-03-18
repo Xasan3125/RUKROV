@@ -1,0 +1,49 @@
+
+.accordion {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 15px;
+    color: black;
+  }
+
+  &__icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__icon--open {
+    transform: rotate(90deg);
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  &-enter-from,
+  &-leave-to {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  &-enter-to,
+  &-leave-from {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  &__body {
+    overflow: hidden;
+    color: gray;
+    margin-bottom: 15px;
+  }
+}
