@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col px-10 lg:px-25">
+  <div class="flex flex-col px-3 md:px-10 lg:px-25">
     <h3
       class="text-center text-xl lg:text-3xl font-bold text-black mb-5 md:mb-10 mx-auto"
     >
@@ -65,7 +65,7 @@
 
     <div class="mb-10"><app-slider ></app-slider></div>
 
-    <app-button class="w-120 mx-auto h-20 border-[1px]" @click="useModal.openModal()">Скачать документы и связаться с менеджером</app-button>
+    <app-button class="w-60  text-wrap whitespace-pre-wrap md:whitespace-nowrap md:w-120 mx-auto h-20 border-[1px]" @click="useModal.openModal()">Скачать документы и связаться с менеджером</app-button>
   </div>
 </template>
 

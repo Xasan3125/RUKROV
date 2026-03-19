@@ -1,6 +1,6 @@
 <template>
   <div
-    class="mt-auto w-full flex justify-center pointer-events-none z-10 relative "
+    class="mt-auto mb-20 md:mb-0 w-full flex justify-center pointer-events-none z-10 relative "
   >
     <div
       class="pointer-events-auto rounded-xl px-2 lg:px-6 py-6 transition-all duration-300 flex  flex-col items-stretch"
@@ -21,7 +21,7 @@
         ]"
       >
         <!-- Меню навигации -->
-        <div v-if="!activeSection && useAppMenu.isOpen" class="flex flex-col gap-1 items-stretch pb-4">
+        <div v-if="!activeSection && useAppMenu.isOpen" class="flex flex-col gap-1 items-stretch ">
           <app-button
             class="text-center whitespace-nowrap text-sm md:text-lg px-3 py-2 rounded-2xl bg-transparent text-black hover:text-white hover:bg-black  font-medium"
             @click="openSection('solution')"
@@ -66,7 +66,7 @@
       </div>
       <div class="flex justify-center">
         <app-button
-          class="cursor-pointer duration-400 z-10 mx-auto mt-2 px-6 py-2 rounded-full text-black hover:text-white hover:bg-black transition-colors text-sm md:text-lg font-medium"
+          class="cursor-pointer duration-400 z-10 mx-auto  px-6 py-2 rounded-full text-black hover:text-white hover:bg-black transition-colors text-sm md:text-lg font-medium"
           @click="toggleOpen"
           v-if="!useAppMenu.isOpen"
         >

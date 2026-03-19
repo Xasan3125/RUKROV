@@ -1,22 +1,22 @@
 <template>
-  <div class="flex flex-col lg:px-25">
-    <h3 class="text-center text-3xl font-bold text-black mb-5 md:mb-10 mx-auto">
+  <div class="px-3 md:px-10 lg:px-25">
+    <h3 class="text-center text-xl lg:text-3xl font-bold text-black mb-5 md:mb-10 mx-auto">
       Строительная кровельная система RUKROV
     </h3>
-    <h4 class="text-center text-lg text-black/60 mb-5 w-120 mx-auto">
+    <h4 class="text-center text-sm lg:text-lg text-black/60 mb-5 md:w-120 mx-auto">
       Бесшовное водонепроницаемое покрытие, которое наносится поверх старого
       основания и исключает слабые стыки.
     </h4>
     <img src="/image/image-beton.png" class="w-full mb-10" alt="roof" />
-    <p class="text-lg mb-5 text-black/60">
+    <p class="text-sm lg:text-lg mb-5 text-black/60">
       В этом разделе мы показываем, как технология RUKROV меняет подход к
       эксплуатации кровель. Мы решаем задачи бизнеса и ЖКХ там, где традиционные
       методы требуют огромных затрат на демонтаж, логистику и полную остановку
       рабочих процессов.
     </p>
     <div class="mb-10">
-      <h4 class="text-black text-3xl mb-3">Ваши преимущества:</h4>
-      <ul class="text-black text-xl pl-7 flex flex-col gap-3">
+      <h4 class="text-black text-xl lg:text-3xl mb-3">Ваши преимущества:</h4>
+      <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-4">
         <li class="list-disc">
           <p>
             <span class="font-bold">Экономия до 50%:</span> Ремонт идет без
@@ -45,8 +45,8 @@
       </ul>
     </div>
     <div class="mb-15">
-      <h4 class="text-black text-3xl mb-3">Какие задачи мы решаем:</h4>
-      <ul class="text-black text-xl pl-7 flex flex-col gap-3">
+      <h4 class="text-black text-xl lg:text-3xl mb-3">Какие задачи мы решаем:</h4>
+      <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-4">
         <li class="list-disc">
           <p>
             <span class="font-bold">Исключаем простой:</span> Работаем на
@@ -66,7 +66,7 @@
     <video class="mb-6" autoplay loop muted src="/video/ai_can.mp4"></video>
 
     <app-button
-      class="mt-auto text-center text-sm md:text-lg px-3 border-[1px] py-2 rounded-2xl bg-transparent text-black hover:text-white hover:bg-black font-medium duration-200"
+      class="mt-auto w-full text-center text-sm md:text-lg px-3 border-[1px] py-2 rounded-2xl bg-transparent text-black hover:text-white hover:bg-black font-medium duration-200"
       @click="useModal.openModal()"
       >Заказать бесплатную диагностику</app-button
     >

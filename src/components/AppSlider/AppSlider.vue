@@ -1,9 +1,9 @@
 <template>
-  <section class="hero-slider ">
+  <section class="hero-slider">
     <Swiper
       :modules="modules"
       :loop="true"
-      :slides-per-view="2"
+      :slides-per-view="slidesPerView"
       :space-between="20"
       :autoplay="{
         delay: 3000,
@@ -13,10 +13,10 @@
     >
       <SwiperSlide v-for="slide in sliderData" :key="slide.title">
         <div>
-          <img class="mb-4" :src="slide.image" :alt="slide.title" />
+          <img class="mb-4 w-full h-auto " :src="slide.image" :alt="slide.title" />
           <div class="flex justify-between text-black">
-            <p class="text-lg font-bold">{{slide.title}}</p>
-            <p class="text-lg text-gray-500">{{slide.date}}</p>
+            <p class="text-sm md:text-lg font-bold">{{ slide.title }}</p>
+            <p class="text-sm md:text-lg text-gray-500">{{ slide.date }}</p>
           </div>
         </div>
       </SwiperSlide>
@@ -30,6 +30,13 @@ import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { useMobile } from "@/components/shared/useMobile.ts";
+import { computed } from "vue";
+
+const isMobile = useMobile(768)
+const slidesPerView = computed(() => isMobile.value ? 1 : 2)
+
+
 
 interface ISliderData {
   image: string;
@@ -39,17 +46,17 @@ interface ISliderData {
 
 const sliderData: ISliderData[] = [
   {
-    image: "/image/image-stadion.png",
+    image: "./image/image-stadion.png",
     title: "СТАДИОН “НИЖНИЙ НОВГОРОД”",
     date: "2025",
   },
-  { image: "/image/image-tower.png", title: "KM TOWER", date: "2025" },
+  { image: "./image/image-tower.png", title: "KM TOWER", date: "2025" },
   {
-    image: "/image/image-marshal.png",
+    image: "./image/image-marshal.png",
     title: "ЖК “МАРШАЛ-ГРАД”",
     date: "2025",
   },
-  { image: "/image/image-rio.png", title: "ТРЦ РИО", date: "2025" },
+  { image: "./image/image-rio.png", title: "ТРЦ РИО", date: "2025" },
 ];
 
 const modules = [Autoplay];
@@ -64,12 +71,6 @@ const modules = [Autoplay];
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
-
-
-
-
 
 .hero-slider .swiper-slide > div {
   width: 100%;
