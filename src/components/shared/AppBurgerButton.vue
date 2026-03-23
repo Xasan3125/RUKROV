@@ -18,9 +18,8 @@
 </template>
 
 <script setup lang="ts">
-import {defineProps } from 'vue'
 
-const{isOpen} = defineProps<{
+const {isOpen} = defineProps<{
   isOpen: boolean
 }>();
 
