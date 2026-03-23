@@ -1,17 +1,19 @@
 <template>
-  <section class="hero-slider">
+  <section class="hero-slider text-black cursor-pointer">
     <Swiper
       :modules="modules"
       :loop="true"
       :slides-per-view="slidesPerView"
       :space-between="20"
+      :navigation="!isMobile"
+
       :autoplay="{
         delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }"
     >
-      <SwiperSlide v-for="slide in sliderData" :key="slide.title">
+      <SwiperSlide v-for="slide in sliderData" :key="slide.title" class="relative">
         <div>
           <img class="mb-4 w-full h-auto " :src="slide.image" :alt="slide.title" />
           <div class="flex justify-between text-black">
@@ -26,7 +28,7 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay } from "swiper/modules";
+import { Autoplay,Navigation,Pagination, Scrollbar } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -59,7 +61,7 @@ const sliderData: ISliderData[] = [
   { image: "./image/image-rio.png", title: "ТРЦ РИО", date: "2025" },
 ];
 
-const modules = [Autoplay];
+const modules = [Autoplay,Navigation,Pagination, Scrollbar,];
 </script>
 
 <style>
@@ -80,5 +82,24 @@ const modules = [Autoplay];
   max-height: 500px;
   object-fit: cover;
   display: block;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  bottom:120px;
+  transform:rotate(180deg);
+  left:20px;
+  z-index:10;
+  scale: 300%;
+  color:white;
+}
+
+.swiper-button-next {
+  position: absolute;
+  bottom:120px;
+  right:20px;
+  z-index:10;
+  scale: 300%;
+  color:white;
 }
 </style>

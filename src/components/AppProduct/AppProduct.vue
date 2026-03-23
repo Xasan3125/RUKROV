@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col px-10 lg:px-25">
+  <div class="flex flex-col px-3 lg:px-25">
     <h3
       class="text-center text-xl lg:text-3xl font-bold text-black mb-5 md:mb-10 mx-auto"
     >
@@ -79,12 +79,11 @@
     </ul>
     <h4 class="text-black text-xl lg:text-3xl mb-3">Линейка продуктов:</h4>
     <ul
-      class="grid grid-cols-1 md:grid-cols-2 md:gap-8 text-black"
+      class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-black"
     >
       <li
         v-for="(card) in cardInfo"
         :key="card.title"
-        class="mb-4 md:mb-0"
         :class="card.span ? 'md:col-span-2' : ''"
       >
         <app-product-card

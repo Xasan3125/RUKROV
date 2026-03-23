@@ -10,7 +10,7 @@
     <img src="/image/image-beton.png" class="w-full mb-10" alt="roof" />
     <p class="text-sm lg:text-lg mb-5 text-black/60">
       В этом разделе мы показываем, как технология RUKROV меняет подход к
-      эксплуатации кровель. Мы решаем задачи бизнеса и ЖКХ там, где традиционные
+      эксплуатации кровель. Мы решаем задачи бизнеса и МКД там, где традиционные
       методы требуют огромных затрат на демонтаж, логистику и полную остановку
       рабочих процессов.
     </p>
@@ -37,7 +37,7 @@
         </li>
         <li class="list-disc">
           <p>
-            <span class="font-bold">Выгода для ДУК и ЖКХ:</span> Технология
+            <span class="font-bold">Выгода для ДУК и МКД:</span> Технология
             вписывается в бюджеты текущего ремонта, давая результат капитального
             и снимая жалобы жильцов на годы.
           </p>
@@ -49,9 +49,7 @@
       <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-4">
         <li class="list-disc">
           <p>
-            <span class="font-bold">Исключаем простой:</span> Работаем на
-            действующих складах и ТЦ. Не нужно останавливать бизнес или защищать
-            оборудование от пыли — демонтажа просто нет.
+            <span class="font-bold">Исключаем простой:</span> Мы решаем задачи для крупных B2B объектов. Не нужно останавливать бизнес или защищать оборудование от пыли-демонтажа просто нет.
           </p>
         </li>
         <li class="list-disc">
@@ -63,7 +61,7 @@
         </li>
       </ul>
     </div>
-    <video class="mb-6" autoplay loop muted src="/video/ai_can.mp4"></video>
+    <video class="mb-6" autoplay loop muted playsinline webkit-playsinline src="/video/ai_can.mp4"></video>
 
     <app-button
       class="mt-auto w-full text-center text-sm md:text-lg px-3 border-[1px] py-2 rounded-2xl bg-transparent text-black hover:text-white hover:bg-black font-medium duration-200"

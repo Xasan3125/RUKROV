@@ -1,14 +1,18 @@
 <template>
   <div
-    class="mt-auto mb-20 md:mb-0 w-full flex justify-center pointer-events-none z-10 relative "
+    class="  w-full flex duration-500 justify-center pointer-events-none z-10 relative"
+    :class="[activeSection ? 'mb-0 mt-0 flex-1' :'md:mb-20 mt-auto']"
   >
     <div
-      class="pointer-events-auto rounded-xl px-2 lg:px-6 py-6 transition-all duration-300 flex  flex-col items-stretch"
+      class="pointer-events-auto rounded-xl px-2 lg:px-6 py-4 transition-all duration-300 flex  flex-col items-stretch"
       :class="containerClass"
     >
       <!-- Кнопка, всегда снизу -->
 
-
+      <div class="flex justify-between">
+        <app-button v-if="activeSection"  @click="activeSection = null" class="w-10"><-</app-button>
+        <app-button v-if="activeSection" @click="toggleOpen" class="w-10">×</app-button>
+      </div>
       <!-- Зона меню / контента -->
       <div
         @transitionend="onPanelTransitionEnd"
@@ -20,6 +24,8 @@
             : 'overflow-y-hidden max-h-[500px]',
         ]"
       >
+
+
         <!-- Меню навигации -->
         <div v-if="!activeSection && useAppMenu.isOpen" class="flex flex-col gap-1 items-stretch ">
           <app-button
@@ -37,6 +43,12 @@
             @click="openSection('about')"
           >
             О нас
+          </app-button>
+          <app-button
+            class="text-center text-sm  md:text-lg px-3 py-2 rounded-2xl bg-transparent text-black hover:text-white hover:bg-black  font-medium"
+            @click="openSection('documentation')"
+          >
+            Документация
           </app-button>
         </div>
 
@@ -65,29 +77,10 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <app-button
-          class="cursor-pointer duration-400 z-10 mx-auto  px-6 py-2 rounded-full text-black hover:text-white hover:bg-black transition-colors text-sm md:text-lg font-medium"
-          @click="toggleOpen"
-          v-if="!useAppMenu.isOpen"
-        >
 
-              Навигация
-        </app-button>
-        <app-button
-          class="cursor-pointer duration-400 z-10 mx-auto  px-6 py-2 rounded-full text-black hover:text-white hover:bg-black transition-colors text-sm md:text-lg font-medium"
-          @click="toggleOpen"
-          :class="activeSection && isExpanded ? 'mt-6' : 'mt-2'"
-          v-else
-        >
-          Закрыть
-        </app-button>
+        <app-burger-button v-if="!activeSection" @click="toggleOpen" :is-open="useAppMenu.isOpen" class="mt-2 "></app-burger-button>
 
-          <app-button   v-if="activeSection && isExpanded"
-            class="  mx-auto mt-6 px-6 py-2  rounded-full text-black hover:text-white hover:bg-black transition-colors text-sm md:text-lg font-medium"
-            @click="activeSection = null"
-          >
-            Назад к меню
-          </app-button>
+
       </div>
     </div>
   </div>
@@ -100,9 +93,12 @@ import { useAppMenuStore } from "./useAppMenu.ts";
 import AppSolution from "@/components/AppSolution/AppSolution.vue";
 import AppProduct from "@/components/AppProduct/AppProduct.vue";
 import AppAboutUs from "@/components/AppAboutUs/AppAboutUs.vue";
+import AppBurgerButton from "@/components/shared/AppBurgerButton.vue";
+
+type ActiveSection = null | "solution" | "system" | "about" | "documentation"
 
 const useAppMenu = useAppMenuStore();
-const activeSection = ref<null | "solution" | "system" | "about">(null);
+const activeSection = ref<ActiveSection>(null);
 const showContent = ref(false);
 const isExpanded = ref(false);
 
@@ -121,7 +117,7 @@ const toggleOpen = () => {
   }
 };
 
-const openSection = (section: "solution" | "system" | "about") => {
+const openSection = (section:ActiveSection) => {
   activeSection.value = section;
   useAppMenu.isOpen = true;
   showContent.value = false;
@@ -133,17 +129,15 @@ const onPanelTransitionEnd = (e: TransitionEvent) => {
   if (e.propertyName !== "max-height" && e.propertyName !== "height") return;
   if (useAppMenu.isOpen && activeSection.value) {
     isExpanded.value = true;
-    setTimeout(() => {
-      showContent.value = true;
-    }, 50);
+    showContent.value = true;
   }
 };
 
 const containerClass = computed(() => {
   if (!useAppMenu.isOpen) return "max-w-[160px] w-full pb-2 text-black ";
   if (activeSection.value)
-    return "md:max-w-[1200px] w-full pb-6 pt-4 bg-white text-white shadow-[0px_1px_26px_1px_rgba(34,60,80,0.28)]";
-  return "max-w-[320px] md:max-w-[400px] w-full pb-4 pt-4 bg-white text-white shadow-[0px_1px_26px_1px_rgba(34,60,80,0.28)]";
+    return "md:max-w-[1200px] w-full pb-6 pt-2 bg-white text-white shadow-[0px_1px_26px_1px_rgba(34,60,80,0.28)]";
+  return "max-w-[320px] md:max-w-[400px] w-full pb-4 pt-4 px-4  bg-white text-white shadow-[0px_1px_26px_1px_rgba(34,60,80,0.28)]";
 });
 
 

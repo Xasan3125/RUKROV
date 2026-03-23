@@ -65,7 +65,7 @@
 
     <div class="mb-10"><app-slider ></app-slider></div>
 
-    <app-button class="w-60  text-wrap whitespace-pre-wrap md:whitespace-nowrap md:w-120 mx-auto h-20 border-[1px]" @click="useModal.openModal()">Скачать документы и связаться с менеджером</app-button>
+    <app-button class="w-60  text-wrap whitespace-pre-wrap md:whitespace-nowrap md:w-120 mx-auto h-20 border-[1px]" @click="useModal.openModal()">Cвязаться с менеджером</app-button>
   </div>
 </template>
 
