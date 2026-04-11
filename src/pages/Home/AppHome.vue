@@ -26,7 +26,6 @@
 <script setup lang="ts">
 import AppMenu from "@/components/AppMenu/AppMenu.vue";
 import { onMounted, ref } from "vue";
-import App3dText from "@/components/App3dText/App3dText.vue";
 import AppBackground from "@/components/App3dText/AppBackground.vue";
 
 const text = "RUKROV";

@@ -4,11 +4,11 @@
 <template>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
  <div class="mb-5">
-   <p id='head1' class='header'>Ремонт кровли по собственной технологии</p>
-   <p id='head2' class='header'>Быстро</p>
-   <p id='head3' class='header'>Надёжно</p>
-   <p id='head4' class='header'>Продлеваем срок службы крыши без замены</p>
-   <p id='head5' class='header'>Наши кровильная система</p>
+   <p id='head1' class='header text-lg md:text-2xl text-center'>Ремонт кровли по собственной технологии</p>
+   <p id='head2' class='header text-lg md:text-2xl text-center'>Быстро</p>
+   <p id='head3' class='header text-lg md:text-2xl text-center'>Надёжно</p>
+   <p id='head4' class='header text-lg md:text-2xl text-center'>Продлеваем срок службы крыши без замены</p>
+   <p id='head5' class='header text-lg md:text-2xl text-center'>Наши кровильная система</p>
  </div>
   <div class='light x1'></div>
   <div class='light x2'></div>
@@ -70,9 +70,8 @@ button:hover{
 .light {
   position: absolute;
   width: 0px;
-  opacity: .75;
   background-color: #3d3d3d;
-  box-shadow: #6a6a6a 0px 0px 20px 2px;
+  box-shadow: #6f6f6f 0px 0px 20px 2px;
   opacity: 0;
   top: 100vh;
   bottom: 0px;
@@ -229,7 +228,6 @@ button:focus{
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   color: #000000;
-  font-size: 2em;
 }
 
 #head1, #head2,#head3, #head4, #head5{
