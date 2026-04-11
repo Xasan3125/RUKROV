@@ -6,6 +6,7 @@
       @click="useModal.closeModal()"
     >
       <div
+
         class="relative w-full max-w-md rounded-2xl bg-white p-6 shadow-xl
                flex flex-col gap-4 sm:max-w-lg"
         @click.stop
@@ -23,7 +24,7 @@
           Оставить заявку
         </h2>
 
-        <form class="flex flex-col gap-4" @submit.prevent="">
+        <form  v-if="!useModal.isSend" class="flex flex-col gap-4" @submit.prevent="useModal.submitForm()">
           <div class="flex flex-col gap-1">
             <label class="text-sm font-medium text-gray-700">Имя</label>
             <input
@@ -80,8 +81,13 @@
            Отправить
           </app-button>
         </form>
+        <div v-else>
+          <h2  class="text-xl font-semibold text-gray-900 mb-2">Заявка успешно отправлена</h2>
+        </div>
       </div>
+
     </div>
+
   </Teleport>
 </template>
 

@@ -63,7 +63,7 @@
       </li>
     </ul>
 
-    <div class="mb-10"><app-slider ></app-slider></div>
+    <div class="mb-10"><app-slider :data="sliderData"></app-slider></div>
 
     <app-button class="w-60  text-wrap whitespace-pre-wrap md:whitespace-nowrap md:w-120 mx-auto h-20 border-[1px]" @click="useModal.openModal()">Cвязаться с менеджером</app-button>
   </div>
@@ -74,7 +74,20 @@ import AppSlider from "@/components/AppSlider/AppSlider.vue";
 import AppButton from "@/components/shared/AppButton.vue";
 import { useModalStore } from "@/components/AppModal/useModal";
 const useModal = useModalStore()
-
+const sliderData = [
+  {
+    image: "./image/image-stadion.png",
+    title: "СТАДИОН “НИЖНИЙ НОВГОРОД”",
+    date: "2025",
+  },
+  { image: "./image/image-tower.png", title: "KM TOWER", date: "2025" },
+  {
+    image: "./image/image-marshal.png",
+    title: "ЖК “МАРШАЛ-ГРАД”",
+    date: "2025",
+  },
+  { image: "./image/image-rio.png", title: "ТРЦ РИО", date: "2025" },
+];
 
 </script>
 
