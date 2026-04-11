@@ -11,7 +11,7 @@
       Инженерное решение из 4-х компонентов для создания сверхпрочного
       гидроизоляционного ковра.
     </h4>
-    <img src="/image/image-4-steps.png" class="w-full mb-10" alt="steps" />
+    <img src="/image/image-4-steps.png" loading="lazy" class="w-full mb-10" alt="steps" />
     <app-button class="mb-4 border-[1px]" @click="useModal.openModal()">Подобрать систему под объект</app-button>
 
     <p class="text-sm lg:text-lg mb-5 text-black/60">

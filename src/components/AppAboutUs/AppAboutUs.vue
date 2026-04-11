@@ -11,7 +11,7 @@
       Российский завод-изготовитель систем жидкой гидроизоляции с полным контролем
       качества.
     </h4>
-    <img src="/image/image-storage.png" class="w-full mb-10" alt="storage" />
+    <img src="/image/image-storage.png" loading="lazy" class="w-full mb-10" alt="storage" />
     <p class="text-sm lg:text-lg mb-5 text-black/60">
       RUKROV — это не посредник, а производитель. Мы объединяем собственные
       лабораторные разработки, промышленную мощность и многолетний опыт работы на

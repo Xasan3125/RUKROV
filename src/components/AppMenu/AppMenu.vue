@@ -78,7 +78,7 @@
       </div>
       <div class="flex justify-center">
 
-        <app-burger-button v-if="!activeSection" @click="toggleOpen" :is-open="useAppMenu.isOpen" class="mt-2 "></app-burger-button>
+        <app-burger-button v-if="!activeSection" @click="toggleOpen" aria-label="menu" :is-open="useAppMenu.isOpen" class="mt-2 "></app-burger-button>
 
 
       </div>

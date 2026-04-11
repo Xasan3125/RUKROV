@@ -1,6 +1,6 @@
 <template>
   <div class="container flex min-h-dvh flex-col justify-center items-center">
-    <h1
+  <h1
       class=" gap-2  uppercase text-4xl text-center absolute md:text-8xl lg:text-9xl flex my-50 font-extralight tracking-[0.5em]  text-black/90 transition-all duration-700"
     >
       <span
@@ -19,12 +19,15 @@
         {{ char }}
       </span>
     </h1>
+<app-background></app-background>
     <app-menu></app-menu>
   </div>
 </template>
 <script setup lang="ts">
 import AppMenu from "@/components/AppMenu/AppMenu.vue";
 import { onMounted, ref } from "vue";
+import App3dText from "@/components/App3dText/App3dText.vue";
+import AppBackground from "@/components/App3dText/AppBackground.vue";
 
 const text = "RUKROV";
 

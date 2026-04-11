@@ -7,7 +7,7 @@
       Бесшовное водонепроницаемое покрытие, которое наносится поверх старого
       основания и исключает слабые стыки.
     </h4>
-    <img src="/image/image-beton.png" class="w-full mb-10" alt="roof" />
+    <img src="/image/image-beton.png" loading="lazy" class="w-full mb-10" alt="roof" />
     <p class="text-sm lg:text-lg mb-5 text-black/60">
       В этом разделе мы показываем, как технология RUKROV меняет подход к
       эксплуатации кровель. Мы решаем задачи бизнеса и МКД там, где традиционные
