@@ -2,7 +2,7 @@
   <Teleport to="body">
     <div
       v-if="useModal.isModalOpen"
-      class="fixed inset-0 z-40 flex items-center justify-center backdrop-blur-xs backdrop-grayscale bg-black/60 px-4"
+      class="fixed font-open inset-0 z-40 flex items-center justify-center backdrop-blur-xs backdrop-grayscale bg-black/60 px-4"
       @click="useModal.closeModal()"
     >
       <div

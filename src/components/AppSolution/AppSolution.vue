@@ -1,26 +1,28 @@
 <template>
   <div class="px-3 md:px-10 lg:px-25">
     <h3 class="text-center text-xl lg:text-3xl font-bold text-black mb-5 md:mb-10 mx-auto">
-      Строительная кровельная система RUKROV
+      Наши возможности
     </h3>
     <h4 class="text-center text-sm lg:text-lg text-black/60 mb-5 md:w-120 mx-auto">
       Бесшовное водонепроницаемое покрытие, которое наносится поверх старого
       основания и исключает слабые стыки.
     </h4>
-    <img src="/image/image-beton.png" loading="lazy" class="w-full mb-10" alt="roof" />
-    <p class="text-sm lg:text-lg mb-5 text-black/60">
+    <img src="/image/Image.png" loading="lazy" class="w-full mb-15" alt="logo" />
+
+    <p class="text-sm lg:text-lg mb-18 text-black/60">
       В этом разделе мы показываем, как технология RUKROV меняет подход к
       эксплуатации кровель. Мы решаем задачи бизнеса и МКД там, где традиционные
       методы требуют огромных затрат на демонтаж, логистику и полную остановку
       рабочих процессов.
     </p>
-    <div class=" grid grid-cols-1 sm:grid-cols-2 gap-4  mb-10">
+    <div class=" grid grid-cols-1 sm:grid-cols-2 gap-4  mb-18">
       <img src="/image/do-1.JPG" loading="lazy" class="w-full rounded-2xl " alt="roof" />
       <img src="/image/posle-1.JPG" loading="lazy" class="w-full rounded-2xl " alt="roof" />
       <img src="/image/do-3.JPG" loading="lazy" class="w-full rounded-2xl" alt="roof" />
       <img src="/image/posle-3.JPG" loading="lazy" class="w-full rounded-2xl" alt="roof" />
     </div>
-    <div class="mb-10">
+
+    <div class="mb-15">
       <h4 class="text-black text-xl md:text-3xl mb-3 font-bold">Какие задачи мы решаем:</h4>
       <ul class="text-black text-sm lg:text-xl  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 mb-4 pl-3">
         <li class="flex flex-col">
@@ -125,7 +127,6 @@
 <script setup lang="ts">
 import AppButton from "@/components/shared/AppButton.vue";
 import { useModalStore } from "@/components/AppModal/useModal";
-import AppSlider from "@/components/AppSlider/AppSlider.vue";
 const useModal = useModalStore()
 
 </script>

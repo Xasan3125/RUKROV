@@ -40,7 +40,7 @@ import { Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useMobile } from "@/components/shared/useMobile.ts";
-import { computed, defineProps } from "vue";
+import { computed } from "vue";
 
 const isMobile = useMobile(768);
 const slidesPerView = computed(() => (isMobile.value ? 1 : 2));

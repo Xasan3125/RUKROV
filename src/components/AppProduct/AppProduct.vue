@@ -3,7 +3,7 @@
     <h3
       class="text-center text-xl lg:text-3xl font-bold text-black mb-5 md:mb-10 mx-auto"
     >
-      Строительная кровельная система RUKROV
+      Продукция и технологии
     </h3>
     <h4
       class="text-center text-sm lg:text-lg text-black/60 mb-5 md:w-120 mx-auto"
@@ -11,19 +11,26 @@
       Инженерное решение из 4-х компонентов для создания сверхпрочного
       гидроизоляционного ковра.
     </h4>
-    <img src="/image/image-4-steps.png" loading="lazy" class="w-full mb-10" alt="steps" />
-    <app-button class="mb-4 border-[1px]" @click="useModal.openModal()">Подобрать систему под объект</app-button>
+    <img
+      src="/image/image-4-steps.png"
+      loading="lazy"
+      class="w-full mb-10"
+      alt="steps"
+    />
+    <app-button class="mb-9 border-[1px]" @click="useModal.openModal()"
+      >Подобрать систему под объект</app-button
+    >
 
-    <p class="text-sm lg:text-lg mb-5 text-black/60">
+    <p class="text-sm lg:text-lg mb-18 text-black/60">
       Система RUKROV — это не просто набор материалов, а выверенный химический
       процесс. Здесь описано, как взаимодействие грунта, армирования и
       каучуковых составов создает монолитную защиту даже на самых сложных узлах
       и вертикальных конструкциях.
     </p>
-    <h4 class="text-black text-xl lg:text-3xl mb-3">
+    <h4 class="text-black text-xl lg:text-3xl mb-6">
       Преимущества технологии:
     </h4>
-    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-4">
+    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-18">
       <li class="list-disc">
         <p>
           <span class="font-bold">Работа с вертикалями:</span> Высокая вязкость
@@ -46,10 +53,10 @@
         </p>
       </li>
     </ul>
-    <h4 class="text-black text-xl lg:text-3xl mb-3">
+    <h4 class="text-black text-xl lg:text-3xl mb-6">
       Как устроена система (поэтапно):
     </h4>
-    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-6">
+    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-18">
       <li class="list-decimal">
         <p>
           <span class="font-bold">Адгезионная подготовка (RUKROV 101):</span>
@@ -78,11 +85,9 @@
       </li>
     </ul>
     <h4 class="text-black text-xl lg:text-3xl mb-3">Линейка продуктов:</h4>
-    <ul
-      class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-black"
-    >
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-black">
       <li
-        v-for="(card) in cardInfo"
+        v-for="card in cardInfo"
         :key="card.title"
         :class="card.span ? 'md:col-span-2' : ''"
       >
@@ -101,7 +106,7 @@ import AppProductCard from "@/components/AppProduct/AppProductCard/AppProductCar
 import AppButton from "@/components/shared/AppButton.vue";
 
 import { useModalStore } from "@/components/AppModal/useModal";
-const useModal = useModalStore()
+const useModal = useModalStore();
 
 interface IProduct {
   title: string;
@@ -128,7 +133,13 @@ const cardInfo: IProduct[] = [
     description:
       "Сцепка и упрочнение основания: пропитывает/обеспыливает и резко улучшает адгезию под дальнейшие слои.",
     image: "./image/image-101.png",
-    span: true,
+  },
+  {
+    title: "RUKROV 512",
+    image: "./image/image-512.png",
+    description:
+      "Ткань из полиэфирного волокна для \n" +
+      "использования с жидкими гидроизоляционными составами RUKROV, в качестве армирующего слоя. ",
   },
 ];
 </script>

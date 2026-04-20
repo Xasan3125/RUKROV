@@ -1,34 +1,22 @@
 <template>
   <div class="container flex min-h-dvh flex-col justify-center items-center">
-  <h1
-      class=" gap-2  uppercase text-4xl text-center absolute md:text-8xl lg:text-9xl flex my-50 font-extralight tracking-[0.5em]  text-black/90 transition-all duration-700"
+    <app-logo class="pointer-events-none"></app-logo>
+
+    <app-background></app-background>
+    <app-menu class="font-open z-30"></app-menu>
+    <div
+      class="absolute text-[12px] md:text-sm left-0 px-5 content-center justify-between bottom-2 flex w-full"
     >
-      <span
-        v-for="(char, i) in text"
-        :key="i"
-        class="inline-block transition-all duration-500"
-        :style="{
-          transitionDelay: `${i * 100}ms`,
-        }"
-        :class="
-          isAdded
-            ? 'opacity-100 translate-y-0 blur-0'
-            : 'opacity-0 translate-y-10 blur-md'
-        "
-      >
-        {{ char }}
-      </span>
-    </h1>
-<app-background></app-background>
-    <app-menu></app-menu>
+      <span class="text-black z-20">ООО "РУКРОВ" 2024</span>
+      <span class="text-black z-20">rukrovnn@mail.ru</span>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import AppMenu from "@/components/AppMenu/AppMenu.vue";
 import { onMounted, ref } from "vue";
-import AppBackground from "@/components/App3dText/AppBackground.vue";
-
-const text = "RUKROV";
+import AppBackground from "@/components/AppBackground/AppBackground.vue";
+import AppLogo from "@/components/AppLogo/AppLogo.vue";
 
 const isAdded = ref(false);
 onMounted(() => {

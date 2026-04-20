@@ -1,6 +1,6 @@
 <template>
-  <app-home class="font-inter"></app-home>
-  <app-modal></app-modal>
+  <app-home></app-home>
+  <app-modal ></app-modal>
 </template>
 
 <script setup lang="ts">

@@ -3,7 +3,7 @@
     <h3
       class="text-center text-xl lg:text-3xl font-bold text-black mb-5 md:mb-10 mx-auto"
     >
-      Строительная кровельная система RUKROV
+      О нас
     </h3>
     <h4
       class="text-center text-sm lg:text-lg text-black/60 mb-5 md:w-120 mx-auto"
@@ -11,8 +11,8 @@
       Российский завод-изготовитель систем жидкой гидроизоляции с полным контролем
       качества.
     </h4>
-    <img src="/image/image-storage.png" loading="lazy" class="w-full mb-10" alt="storage" />
-    <p class="text-sm lg:text-lg mb-5 text-black/60">
+    <img src="/image/image-fura.jpg" loading="lazy" class="w-full mb-8 rounded-2xl" alt="roof" />
+    <p class="text-sm lg:text-lg mb-16 text-black/60">
       RUKROV — это не посредник, а производитель. Мы объединяем собственные
       лабораторные разработки, промышленную мощность и многолетний опыт работы на
       объектах федерального значения, обеспечивая полную техническую поддержку на
@@ -21,7 +21,7 @@
     <h4 class="text-black text-xl lg:text-3xl mb-3">
       Почему нам доверяют:
     </h4>
-    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-4">
+    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-16">
       <li class="list-disc">
         <p>
           <span class="font-bold"> Прямая цена:</span> Собственное производство в РФ исключает наценки дилеров и
@@ -45,7 +45,7 @@
     <h4 class="text-black text-xl lg:text-3xl mb-3">
       Результат в цифрах:
     </h4>
-    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-8">
+    <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-18">
       <li class="list-disc">
         <p>
           <span class="font-bold"> 100% герметичность</span> сложных узлов примыканий.
