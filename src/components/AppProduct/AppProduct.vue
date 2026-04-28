@@ -53,21 +53,36 @@
         </p>
       </li>
     </ul>
+
+    <div class="mb-15">
+      <ul class="grid grid-cols-2 gap-4 auto-rows-[200px]">
+        <li class="col-span-1 row-span-1">
+          <img src="/image/image-roof-3.jpg" alt="крыша 1" class="w-full h-full object-cover rounded-lg">
+        </li>
+
+        <li class="col-span-1 row-span-2">
+          <img src="/image/image-roof-1.jpg" alt="крыша 2" class="w-full h-full object-cover rounded-lg">
+        </li>
+
+        <li class="col-span-1 row-span-1">
+          <img src="/image/image-roof-2.jpg" alt="крыша 3" class="w-full h-full object-cover rounded-lg">
+        </li>
+      </ul>
+    </div>
+
     <h4 class="text-black text-xl lg:text-3xl mb-6">
       Как устроена система (поэтапно):
     </h4>
     <ul class="text-black text-sm lg:text-xl pl-7 flex flex-col gap-3 mb-18">
       <li class="list-decimal">
         <p>
-          <span class="font-bold">Адгезионная подготовка (RUKROV 101):</span>
-          Двухкомпонентный грунт проникает в поры бетона или битума, создавая
-          «мертвую хватку» для системы.
+          <span class="font-bold">Адгезионная подготовка (РУКРОВ 101):</span>
+          Двухкомпонентный грунт проникает в поры бетона улучшая прочностные характеристики основания для последующего нанесения гидроизоляционного состава.
         </p>
       </li>
       <li class="list-decimal">
         <p>
-          <span class="font-bold">Промежуточный слой:</span> Первый слой
-          состава, который служит химической «постелью» для армирующего полотна.
+          <span class="font-bold">Промежуточный слой:</span> базовый слой гидроизоляционного состава, в который утапливается армирующее полотно с последующей пропиткой.
         </p>
       </li>
       <li class="list-decimal">
@@ -131,7 +146,7 @@ const cardInfo: IProduct[] = [
   {
     title: "RUKROV 101",
     description:
-      "Сцепка и упрочнение основания: пропитывает/обеспыливает и резко улучшает адгезию под дальнейшие слои.",
+      "Двухкомпонентный грунт глубокого проникновения, который укрепляет основание, связывает пыль и обеспечивает надежную адгезию гидроизоляционных покрытий.",
     image: "./image/image-101.png",
   },
   {
